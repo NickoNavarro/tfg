@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/image.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+     
+    <title>Document</title>
+</head>
+<body class="font-sans">
+    
+
+ <div class=" bg-purple h-screen m-auto">
+        <div id="image" hidden class="fixed   bg-no-repeat  inset-0 m-auto lg:block">
+        <div>
+            
+        </div>
+
+
+        
+           
+           
+        </div>
+        <div hidden role="hidden" class="fixed relative inset-0 w-6/12 ml-auto bg-white bg-opacity-70 backdrop-blur-xl lg:block"></div>
+        <div class="relative h-full ml-auto bg-white lg:w-6/12">
+            <div class="m-auto py-12 px-6 sm:p-20 xl:w-10/12">
+                <div class="space-y-4   ">
+                    <a href="">
+                       
+                    </a>
+                   
+                </div>
+                
+                <div class="mt-12 grid gap-6 sm:grid-cols-2">
+                    <button class="py-3 px-6 rounded-xl bg-purple hover:bg-blue-100 focus:bg-purple active:bg-blue-200">
+                        <div class="flex gap-4 m-2 items-center justify-center">
+                           
+                            <a class="w-full flex ml-2  " href="/login/auth/google"> <span class="block w-full  items-center flex justify-center font-medium tracking-wide bg-purple text-sm text-white text-center  text-blue-700"><box-icon name='google' type='logo' color='#ffffff' ></box-icon> with  Google</span></a>
+                        </div>
+                    </button>
+                    <button class="py-3 px-6 rounded-xl bg-purple transition hover:bg-gray-800 active:bg-gray-600 focus:bg-gray-700">
+                        <div class="flex gap-4 items-center justify-center text-white">
+                            
+                            <a  href="/login/auth/github" class="block w-full ml-2 "> <span class="font-medium tracking-wide items-center flex justify-center bg-purple text-sm text-white"><box-icon name='github' type='logo' style="padding-right: 2px;" color='#ffffff' ></box-icon>  with Github </span></a>
+                        </div>
+                    </button>
+                </div>
+
+                <div role="hidden" class="mt-12 border-t">
+                    <span class="block w-max mx-auto -mt-3 px-4 text-center text-gray-500 bg-white">Or</span>
+                </div>
+
+                <form action="/login" method="post" class="space-y-6 py-6">
+                    <div>
+                        <input 
+                                type="text" 
+                                name="username"
+                                placeholder="Your username"
+                                class="w-full py-3 px-6 ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                        >
+                    </div>
+
+                    <div class="flex flex-col items-end">
+                        <input 
+                                type="password" 
+                                placeholder="What's the secret word ?"
+                                name="password"
+                                class="w-full py-3 px-6 ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                        >
+                         
+                          <div class="">
+
+                              {{#if msg}}
+                                    <ul>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                        </svg>
+                                        <li class="text-red">{{msg}}</li>
+                                    </ul> 
+
+                                {{/if}}
+
+                           {{#if errors}}
+                                <ul>
+                                    {{#each errors }}
+               
+                                    <li class="text-red ">{{this.msg}}</li>
+                                    {{/each}}
+                                </ul>
+                            {{/if}}
+
+                          {{#if errores}}
+
+                                <h1 class="text-red ">{{errores}}</h1>
+                            {{/if}}
+
+                            </div>
+
+                        <button type="reset" class="w-max p-3 -mr-3">
+                            <span class="text-sm tracking-wide text-blue-600">Forgot password ?</span>
+                        </button>
+                    </div>
+
+                    <div>
+                        <button class="w-full px-6 py-3 rounded-xl bg-purple transition hover:bg-sky-600 focus:bg-sky-600 active:bg-sky-800">
+                            <span class="font-semibold text-white text-lg">Login</span>
+                        </button>
+                        <a href="#" type="reset" class="w-max p-3 -ml-3">
+                            <a href="/register" class="text-sm tracking-wide text-blue-600">Dont have an acount ? </a>
+                        </a>
+                    </div>
+                </form>
+
+                <div class="border-t pt-12">
+                    <div class="space-y-2 text-center">
+                      
+                        <span class="block text-sm tracking-wide text-gray-500">Get +50 modern blocks for free next month.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+   
+</body>
+</html>
+
+ <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
+               
+
+              
+               

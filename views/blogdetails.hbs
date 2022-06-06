@@ -1,0 +1,43 @@
+
+{{> navbar}}
+
+<section class="home space-y-8 p-6 mb-6">
+    <div class="text">{{detalles.titulo}}</div>
+
+
+    <div class="mx-auto container justify-center">
+
+         <div class="rounded-lg bg-white p-8 shadow-lg mb-16 overflow-hidden px-4">
+
+            <div>
+                <img class="h-56 object-cover w-full" src="{{detalles.imagen}}" alt="">
+            </div>
+
+            <div class="p-3">
+               
+                <h3   class=" mt-2 text-xl leading-7  mb-2 font-semibold text-gray-900">{{detalles.titulo}} </h3>
+                
+                <p>{{detalles.descripcion}}</p>
+            </div>
+
+            <div class="flex ml-3 py-2 inline-block mt-3">
+
+                <div>
+
+                <img class="rounded-full h-10 w-10 " src="/images/foto.PNG" alt="">
+                </div>
+
+                <div>
+                    <h3 class=" leading-5 px-3 py-1  font-medium text-gray-900">Nicko</h3>
+                </div>
+
+                <div> 
+                    <h3 class="leading-5 py-1 px-3 ">{{detalles.fecha}}</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+</section>

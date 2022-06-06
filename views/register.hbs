@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/image.css">
+    <title>Document</title>
+</head>
+<body class="font-sans">
+
+   <div class=" h-screen m-auto">
+        <div id="image" hidden class="fixed inset-0 mx-auto  lg:block">
+           
+            
+        </div>
+        <div hidden role="hidden" class="fixed inset-0 w-6/12 ml-auto bg-white bg-opacity-70 backdrop-blur-xl lg:block"></div>
+        <div class="relative h-full ml-auto bg-white lg:w-6/12">
+            <div class="m-auto py-12 px-6 sm:p-20 xl:w-10/12">
+                <div class="space-y-4">
+                    <a href="">
+                       
+                    </a>
+                    <p class="font-medium text-lg text-gray-600">Welcome to tailus ! register</p>
+                </div>
+                
+                
+                
+
+                <form action="/register" method="post" class="space-y-6 py-6">
+                    
+                        <input 
+                                type="text" 
+                                name="nombre"
+                                placeholder="Your name"
+                                class="w-full py-3 px-6 ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                        >
+                    
+
+                    
+                        <input 
+                                type="email" 
+                                placeholder="What's the  email ?"
+                                name="email"
+                                class="w-full py-3 px-6 ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                        >
+						<input 
+                                type="text" 
+                                placeholder="What's the username ?"
+                                name="username"
+                                class="w-full py-3 px-6 ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                        >
+						<input 
+                                type="password" 
+                                placeholder="What's the secret word ?"
+                                name="password"
+                                class="w-full py-3 px-6 ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none"
+                        >
+                         
+                          <div class="">
+
+                              {{#if msg}}
+                                    <ul>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                        </svg>
+                                        <li class="text-red ">{{msg}}</li>
+                                    </ul> 
+
+                                {{/if}}
+
+                           {{#if errors}}
+                                <ul>
+                                    {{#each errors }}
+               
+                                    <li class="text-red">{{this.msg}}</li>
+                                    {{/each}}
+                                </ul>
+                            {{/if}}
+
+                            {{#if errores}}
+
+                                <h1 class="text-red ">{{errores}}</h1>
+                            {{/if}}
+                            </div>
+
+                        <button type="reset" class="w-max p-3 -mr-3">
+                            <span class="text-sm tracking-wide text-blue-600">Forgot password ?</span>
+                        </button>
+                   
+                    <div>
+                        <button  class="w-full px-6 py-3 rounded-xl bg-purple transition hover:bg-sky-600 focus:bg-sky-600 active:bg-sky-800">
+                            <span class="font-semibold text-white text-lg">register</span>
+                        </button>
+                        <a href="#" type="reset" class="w-max p-3 -ml-3">
+                            <a href="/login" class="text-sm tracking-wide text-blue-600">You already have an acount ? </a>
+                        </a>
+                    </div>
+                </form>
+
+                <div class="border-t pt-12">
+                    <div class="space-y-2 text-center">
+                        <img src="../public/images/logo.svg" class="w-40 m-auto grayscale" alt="">
+                        <span class="block text-sm tracking-wide text-gray-500">Get +50 modern blocks for free next month.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>

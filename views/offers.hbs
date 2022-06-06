@@ -1,0 +1,124 @@
+{{> navbar}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.paypal.com/sdk/js?client-id=AZHg3UISZCvOCJpeb0qZ_0Z0s9TqaNbzJo6Wb13evtWs8cwA5PVRJSwJJ0g4Vs2DD6d9dW_02YGBUaoG&components=buttons"></script>
+    <script src="../helpers/buttonsPaypal.js"></script>
+</head>
+<body>
+    
+
+<section class="home space-y-8 p-6 mb-6">
+    <div class="text"> Offers</div>
+     <div class="bg-white rounded-md mb-8  p-8 ml-6 ">
+<div class="flex">
+
+
+{{#each options}}
+<div class="h-screen select-none  w-full flex items-center justify-center">
+
+  <card class="rounded-lg select-none p-4 m-4 shadow-lg mb-16 bg-white w-80  overflow-hidden">
+
+    <!-- Top Section -->
+    <div class="flex flex-col select-none items-center">
+
+      <!-- Quota Name and Details -->
+      <p class="mt-10 text-2xl font-light text-gray-700"> {{this.name}} </p>
+      <p class="mt-1 text-3xl font-light text-gray-700"> {{this.gb}} GB</p>
+
+      <!-- Button -->
+      <button style="background-color: blue;" class="mt-10 rounded py-2 px-4 bg-red-500 text-white hover:bg-blue-700 hover:text-gray-50 text-sm">
+        IDR {{this.price}}€ / month
+      </button>
+
+      <!-- Additional Offer -->
+      <p class="mt-4 text-gray-700 text-sm font-light"> Or prepay anually </p>
+      <p class="text-gray-800 mb-6 text-sm font-light"> ({{this.save}} %): </p>
+     
+
+      <!-- Line -->
+      <div class="h-0.5 bg-gray-200 w-full my-5"> </div>
+
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="   space-x-4 ">
+
+      <p class="text-gray-700 text-sm font-light"> Google One includes </p>
+
+      <div class="grid grid-cols-1 mt-3 gap-y-2 mb-8  ">
+
+     
+
+        <!-- Details 1 -->
+        <div class="pl-2 flex  ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        
+        <div class="col-span-4 text-sm font-light text-gray-700">
+          {{this.gb}} GB storage
+        </div>
+        </div>
+
+        <!-- Details 2 -->
+        <div class="pl-2 flex">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        
+        <div class="col-span-4 text-sm font-light text-gray-700">
+          Access to Google {{this.name}}
+        </div>
+        </div>
+
+        <!-- Details 3 -->
+        <div class="pl-2 flex">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        
+        <div class="col-span-4 text-sm font-light text-gray-700">
+          Share with up to {{this.share}} others
+        </div>
+        </div>
+
+       <!-- Details 4 -->
+       <div class="pl-2 flex">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        
+        <div class="col-span-4 text-sm font-light text-gray-700">
+          Extra member benefits
+        </div>
+        </div>
+
+        </div>
+
+        <div class="text-center justify-center items-center mb-6 mt-6">
+            <a style="background-color: blue;" class="text-center justify-center items-center text-white px-6 py-2 rounded-full bg-blue-500" href="/offersDetail/{{this.id}}">comprar</a>
+        </div>
+
+      
+
+    </div>
+
+  </card>
+
+</div>
+{{/each }}
+
+   </div>
+
+
+</div>
+
+</section>
+ 

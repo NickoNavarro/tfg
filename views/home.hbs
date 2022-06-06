@@ -1,0 +1,113 @@
+{{> navbar }} 
+<section class="home space-y-8 p-6 mb-6">
+   <div class="text">Home</div>
+  <div class="bg-white rounded-md mb-8  p-8 ml-6 ">
+   <div class="w-full" >
+
+   
+
+
+
+
+<form class="mt-4 w-full" action="/home" method="POST">
+<div class="flex  items-center  justify-around">
+
+
+ <div class="w-80  py-3 px-2 flex rounded-full shadow-lg">
+ <button type="submit" class="flex items-center justify-center px-4  focus:outline-none  rounded-md">
+            <svg class="w-6 h-6 " fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24">
+                <path
+                    d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+            </svg>
+        </button>
+        <input  class=" outline-none    w-60  mr-4" name="peticion" type="text" placeholder="Search...">
+     </div>
+
+
+   
+        
+     
+
+
+</div>
+     
+  
+
+</form>
+
+
+      
+    
+
+ <div class="flex items-center justify-center mt-10 ">
+   <div class="bg-gray-800 rounded-lg shadow-lg p-8 w-3xl">
+
+
+
+ <div class="mx-auto container   justify-center">
+
+         <div class="r  bg-gray-600 p-8   mb-16 w-3xl overflow-hidden ">
+
+           <div  class="w-full space-y-2">
+
+          
+          <h1 class="text-xl text-center">  {{datos.name}} {{datos.country}}</h1>
+           <h2 class="text-black text-center text-lg ">{{time.output }} {{time.day}} </h2> 
+
+
+          
+          <div class=" text-center justify-center items-center ">
+
+            <h2  class="text-center text-lg text-black">Temp min: {{datos.mincelsius}}°C</h2>
+
+         
+            <img  class=" h-50 mx-auto mt-2  text-center items-center    justify-center "src="http://openweathermap.org/img/w/{{datos.icon}}.png" alt="weather">
+          
+            
+          </div>
+
+          <h2  class="text-center text-xl text-black">Description: {{datos.description}}</h2>
+
+
+           
+                
+            
+               
+            <h2  class="text-center text-lg text-black">Temp max: {{datos.maxcelsius}}°C</h2>
+             
+            <h2  class="text-center text-lg text-black">Humidity: {{datos.humidity}}%</h2>
+         
+         
+           
+          
+            
+
+
+  </div>
+ </div>
+</div>
+  
+
+</div>
+</div>
+   </div>
+</section>
+
+
+            
+
+
+
+
+
+       
+        
+         
+    
+  
+
+
+
+
+

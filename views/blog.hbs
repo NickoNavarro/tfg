@@ -1,0 +1,74 @@
+{{> navbar}}
+
+
+<section class="home space-y-8 p-6 mb-6">
+   <div class="text">Blog</div>
+<div class=" py-16">
+    <div class="mx-auto text-center">
+        <h1  class=" text-4xl leading-10 tracking-tigth font-extrabold">From the blog</h1>
+        <p  class="mt-5 mx-auto max-w-4xl text-xl leading-7 text-gray-500 ">In this blog users will have at your disposal the latest news about the weather 
+and curiosities that we can do to take care of the planet </p>
+    </div>
+
+
+    <div class="p-8 lg:grid lg:gap-5 lg:grid-cols-3">
+
+        {{#each blogs }}        
+        <div class="rounded-lg p-8 shadow-lg mb-16 bg-white  overflow-hidden px-4">
+
+            <div>
+                <img class="h-48 object-cover w-full" src="{{this.imagen}}" alt="">
+            </div>
+
+            <div class="p-3">
+                <a href="blogdetail/{{this.id}}" class="text-sm leading-5 hover:text-indigo-700 font-medium text-indigo-500"> Leer Más</a>
+                <h3   class=" mt-2 text-xl leading-7  mb-2 font-semibold text-gray-900">{{this.titulo}} </h3>
+                <p>{{this.minidescripcion}}</p>
+
+            </div>
+
+            <div class="flex ml-3 py-2 inline-block mt-3">
+
+                <div>
+
+                <img class="rounded-full h-10 w-10 " src="/images/foto.PNG" alt="">
+                </div>
+
+                <div>
+                    <h3 class=" leading-5 px-3 py-1  font-medium text-gray-900">Nicko</h3>
+                </div>
+
+                <div> 
+                    <h3 class="leading-5 py-1 px-3 ">{{this.fecha}}</h3>
+                </div>
+            </div>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+</div>
+ 
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
